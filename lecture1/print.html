@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Print Media Example</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <style>
+        @media print {
+            .screen-only {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+        <p class="screen-only">This is the hidden paragraph.</p>
+    </section>
+</body>
+</html>

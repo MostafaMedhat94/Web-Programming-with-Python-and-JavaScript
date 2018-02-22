@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block heading %}
+    First Page
+{% endblock %}
+
+ {% block body %}
+     <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tenetur rem delectus praesentium cupiditate dolor ad possimus assumenda maiores illo distinctio, illum nisi molestiae, quos quas dolore itaque unde ea.
+     </p>
+
+     <a href="{{ url_for('more') }}">See more</a>
+ {% endblock %}

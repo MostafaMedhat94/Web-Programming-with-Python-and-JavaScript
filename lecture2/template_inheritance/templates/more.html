@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    More
+{% endblock %}
+
+{% block heading %}
+    Second Page
+{% endblock %}
+
+ {% block body %}
+     <p>
+         Javascript is awesome and powerful!
+     </p>
+
+     <a href="{{ url_for('index') }}">See more</a>
+ {% endblock %}

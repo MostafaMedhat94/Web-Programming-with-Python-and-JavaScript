@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Flights
+{% endblock %}
+
+{% block body %}
+    <h1>Book a Flight</h1>
+    <form action="{{ url_for('book') }}" method="POST">
+        <div class="form-group">
+            <select class="form-control" name="flight_id">
+                {% for flight in flights %}
+                    <option value="{{flight.id}}">{{flight.origin}} to {{flight.destination}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" name="name" placeholder="Enter passenger name ...">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="error-message">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Book a Flight</button>
+        </div>
+    </form>
+{% endblock %}
